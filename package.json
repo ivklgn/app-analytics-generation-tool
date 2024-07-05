@@ -1,0 +1,14 @@
+{
+  "name": "app-analytics-generation-tool",
+  "version": "1.0.0",
+  "description": "@gitbeaker/node@35.4.0",
+  "main": "index.js",
+  "scripts": {
+    "generate": "node --env-file=.env ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@gitbeaker/node": "^35.4.0"
+  }
+}

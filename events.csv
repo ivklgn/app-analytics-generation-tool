@@ -1,0 +1,21 @@
+Название события,Описание события,Передаваемые данные,,
+basket,,,,
+favorites_add_item,Добавление книги в отложенные,Имя,Тип поля,Обязательное
+,,source_internal,string,+
+,,landing_id,string,+
+,,promocode_value,string,+
+,,ref_url,string,+
+cart_remove_item,Удаление книг из корзины,Имя,Тип поля,Обязательное
+,,amount,number,+
+,,price,number,+
+,,user,user_info,-
+search,,,,
+search_empty_view,Пустая выдача,Имя,Тип поля,Обязательное
+,,search_id,string,+
+,,query,string,+
+,,page_number,number,+
+auth,,,,
+auth_popup_view,Показ попапа авторизации (пример),Имя,Тип поля,Обязательное
+,,languages,number[],-
+,,user,user_info,-
+,,access_rights,access_rights[],+
