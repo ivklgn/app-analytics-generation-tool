@@ -8,6 +8,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
   title: "Analytics Docs",
   // tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
