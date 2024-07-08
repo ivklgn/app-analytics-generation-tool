@@ -17,3 +17,17 @@ sidebar_position: 2
 
 
 
+
+<details>
+  <summary>Code example</summary>
+  ```typescript
+  trackEvent("auth.auth_popup_view", {
+    languages: "TODO: compound and arrays",
+    user: "TODO: compound and arrays",
+    access_rights: "TODO: compound and arrays"
+  }); 
+  ```
+</details>
+
+
+

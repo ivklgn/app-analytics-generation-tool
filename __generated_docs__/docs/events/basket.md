@@ -19,6 +19,21 @@ sidebar_position: 2
 ✅ Событие реализовано
 
 
+<details>
+  <summary>Code example</summary>
+  ```typescript
+  trackEvent("basket.favorites_add_item", {
+    source_internal: "some string",
+    landing_id: "some string",
+    promocode_value: "some string",
+    ref_url: "some string"
+  }); 
+  ```
+</details>
+
+
+
+
 ## cart_remove_item
 
 Удаление книг из корзины
@@ -31,4 +46,18 @@ sidebar_position: 2
 
 
 ✅ Событие реализовано
+
+
+<details>
+  <summary>Code example</summary>
+  ```typescript
+  trackEvent("basket.cart_remove_item", {
+    amount: 100,
+    price: 100,
+    user: "TODO: compound and arrays"
+  }); 
+  ```
+</details>
+
+
 

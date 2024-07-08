@@ -17,3 +17,17 @@ sidebar_position: 2
 
 ✅ Событие реализовано
 
+
+<details>
+  <summary>Code example</summary>
+  ```typescript
+  trackEvent("search.search_empty_view", {
+    search_id: "some string",
+    query: "some string",
+    page_number: 100
+  }); 
+  ```
+</details>
+
+
+

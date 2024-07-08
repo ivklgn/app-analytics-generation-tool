@@ -83,6 +83,9 @@ ${event.description}
 ${fieldsContent}
 
 ${eventToSearchResults.find((r) => r.eventName === event.name).results.length ? "✅ Событие реализовано" : ""}
+
+${writeTypescriptExampleCode({ eventGroup, eventName: event.name, eventData: event })}
+
 \n`;
         }
         return content;
@@ -96,6 +99,38 @@ sidebar_position: 2
     );
 
     await writeFile(`${pathToDocusaurusEvents}/${eventGroup.name}.md`, eventsContent);
+  }
+}
+
+/**
+ * Just for example
+ */
+function writeTypescriptExampleCode({ eventGroup, eventName, eventData }) {
+  const exampleEventParams = eventData.fields.reduce((acc, field, index, arr) => {
+    acc += `  ${field.name}: ${getRandomValueByType(field.type)}${index < arr.length - 1 ? ",\n  " : ""}`;
+    return acc;
+  }, "  ");
+  return `
+<details>
+  <summary>Code example</summary>
+  \`\`\`typescript
+  trackEvent("${eventGroup.name}.${eventName}", {
+${exampleEventParams}
+  }); 
+  \`\`\`
+</details>
+`;
+}
+
+function getRandomValueByType(type) {
+  switch (type) {
+    case "string":
+      return `"some string"`;
+    case "number":
+      return 100;
+    default:
+      // TODO:
+      return `"TODO: compound and arrays"`;
   }
 }
 

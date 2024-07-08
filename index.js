@@ -37,20 +37,4 @@ const PATH_TO_GENERATED_DOCS = "__generated_docs__/docs";
     pathToDocusaurusDir: PATH_TO_GENERATED_DOCS,
     eventToSearchResults: allSearchUsageResults,
   });
-
-  // пример поиска использования событий в гитлаб
-
-  // console.log("Search usage in monorepo project:");
-
-  // allResults.forEach(({ eventName, results }) => {
-  //   console.log(results.length ? "✅" : "❌", eventName);
-
-  //   if (results.length) {
-  //     console.table(
-  //       results.map((r) => ({
-  //         path: r.path,
-  //       }))
-  //     );
-  //   }
-  // });
 })();
